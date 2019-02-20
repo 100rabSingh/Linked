@@ -1,7 +1,6 @@
-import sun.awt.image.ImageWatched;
-
 public class LinkedList {
     private int data;
+    private LinkedList next;
 
     public int getData(){
 
@@ -25,5 +24,9 @@ public class LinkedList {
         this.next = null;
     }
 
-    public LinkedList(int data, )
+    public LinkedList(int data, LinkedList next)
+    {
+        this.data = data;
+        this.next = next;
+    }
 }
