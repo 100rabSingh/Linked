@@ -70,4 +70,9 @@ public class SinglyLinkedList {
      this.head = newNode;
      size++;
     }
+    private void insertAfter(int data, Node node)
+    {
+        Node newNode = new Node();
+
+    }
 }
