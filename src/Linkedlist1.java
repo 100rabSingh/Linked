@@ -1,3 +1,4 @@
+/*
 public class Linkedlist1 {
 
     public int getCurrentSize(){
@@ -19,3 +20,4 @@ public class Linkedlist1 {
 
     }
 }
+*/
