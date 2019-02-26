@@ -28,4 +28,9 @@ public class SinglyLinkedList {
     private Node head = null;
     private int size =0;
 
+    public static void main(String[] args) {
+        SinglyLinkedList linkedList = new SinglyLinkedList();
+
+
+    }
 }
