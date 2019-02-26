@@ -38,6 +38,11 @@ public class SinglyLinkedList {
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
         System.out.println(linkedList);
+        for (int i = 0; i < 5; i++) {
+            linkedList.insertHead(i+1);
+        }
+        linkedList.insertHead(42);
+        System.out.println(linkedList);
     }
     @Override
     public String toString() {
@@ -46,6 +51,10 @@ public class SinglyLinkedList {
        Node temp = this.head;
        while(temp != null){
            response.append(temp.getData());
+           if(temp.next != null)
+           {
+               response.append(" ==> ");
+           }
            temp = temp.next;
        }
 
