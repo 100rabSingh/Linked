@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class SinglyLinkedList {
 
     private class Node{
@@ -30,7 +32,15 @@ public class SinglyLinkedList {
 
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
+        System.out.println(linkedList);
+    }
+    @Override
+    public String toString() {
+       StringBuilder response = new StringBuilder();
+       response.append("[");
 
+       response.append("]");
+       return response.toString();
 
     }
 }
