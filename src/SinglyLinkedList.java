@@ -42,8 +42,11 @@ public class SinglyLinkedList {
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
         System.out.println(linkedList);
+        for (int i = 0; i < 5; i++) {
+            linkedList.insert(i+1);
+        }
         linkedList.insert(42);
-        linkedList.insert(43);
+        linkedList.remove(2);
         System.out.println(linkedList);
     }
     @Override
@@ -123,7 +126,14 @@ if(temp.data == data){
     response = removeHead();
 }
 else{
-    while(temp != null)
+    while(temp != null){
+        if(temp.data == data){
+            response = removeAfter(temp);
+            break;
+        }
+        temp = temp.next;
+    }
+    return response;
 }
 }
 }
