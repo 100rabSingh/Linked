@@ -116,4 +116,7 @@ private int removeAfter(Node node){
     }
     return response;
 }
+public int remove(int data){
+
+}
 }
