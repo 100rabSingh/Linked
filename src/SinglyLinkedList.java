@@ -11,19 +11,23 @@ public class SinglyLinkedList {
         this.data = data;
         }
 
-        public int getData() {
+        public int getData()
+        {
             return data;
         }
 
-        public void setData(int data) {
+        public void setData(int data)
+        {
             this.data = data;
         }
 
-        public Node getNext() {
+        public Node getNext()
+        {
             return next;
         }
 
-        public void setNext(Node next) {
+        public void setNext(Node next)
+        {
             this.next = next;
         }
 
@@ -85,6 +89,19 @@ public void insert(int data){
                 temp = temp.next;
             }
             insertAfter(data,temp);
+        }
+}
+
+private int removeHead(){
+        int response = -1;
+
+        Node temp = this.head;
+
+        if(temp != null){
+            this.size--;
+            response = temp.data;
+            this.head = this.head.next;
+
         }
 }
 }
