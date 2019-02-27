@@ -31,6 +31,11 @@ public class DoublyLinkedList {
     public String toString() {
         StringBuilder response = new StringBuilder();
         response.append("[");
+        Node temp = this.head;
+        while (temp != null){
+            response.append(temp.data);
+            temp = temp.next;
+        }
         response.append("]");
         return  response.toString();
     }
