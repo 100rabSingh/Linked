@@ -30,6 +30,8 @@ public class DoublyLinkedList {
     @Override
     public String toString() {
         StringBuilder response = new StringBuilder();
-
+        response.append("[");
+        response.append("]");
+        return  response.toString();
     }
 }
