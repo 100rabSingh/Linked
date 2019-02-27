@@ -118,6 +118,6 @@ private int removeAfter(Node node){
 }
 public int remove(int data){
 int response = -1;
-
+Node temp = this.head;
 }
 }
