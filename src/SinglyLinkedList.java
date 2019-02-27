@@ -101,7 +101,11 @@ private int removeHead(){
             this.size--;
             response = temp.data;
             this.head = this.head.next;
-
         }
+        return response;
+}
+
+private int removeAfter(Node node){
+
 }
 }
