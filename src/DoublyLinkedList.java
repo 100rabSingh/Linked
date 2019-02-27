@@ -26,7 +26,7 @@ public class DoublyLinkedList {
         DoublyLinkedList linkedList = new DoublyLinkedList();
         System.out.println(linkedList);
         for (int i = 0; i < 5; i++) {
-            linkedList.insertHead(i+1);
+            linkedList.insert(i+1);
         }
         System.out.println(linkedList);
 
@@ -41,7 +41,7 @@ public class DoublyLinkedList {
             response.append(temp.data);
             if(temp.next != null)
             {
-                response.append(" ==> ");
+                response.append(" <==> ");
             }
             
             temp = temp.next;
@@ -50,8 +50,28 @@ public class DoublyLinkedList {
         return  response.toString();
     }
     public void insertHead(int data){
-    Node newNode = new Node(data, null, this.head);
-    this.head = newNode;
+    /*Node newNode = new Node(data, null, this.head);
+    this.head = newNode;*/
+    this.head = new Node(data, null, this.head);
     size++;
+    }
+    private void insertAfter(int data, Node node){
+        Node newNode = new Node(data, node, this.head);
+        node.next = newNode;
+        newNode.next.pre = newNode;
+        size++;
+    }
+    public void insert(int data){
+        if(head == null){
+            insertHead(data);
+        }
+        else
+        {
+            Node temp = this.head;
+            while (temp != null){
+                temp = temp.next;
+            }
+            insertAfter(data, temp);
+        }
     }
 }
