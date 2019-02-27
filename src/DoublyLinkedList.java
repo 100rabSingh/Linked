@@ -25,6 +25,11 @@ public class DoublyLinkedList {
     public static void main(String[] args) {
         DoublyLinkedList linkedList = new DoublyLinkedList();
         System.out.println(linkedList);
+        for (int i = 0; i < 5; i++) {
+            linkedList.insertHead(i+1);
+        }
+        System.out.println(linkedList);
+
     }
 
     @Override
@@ -34,12 +39,19 @@ public class DoublyLinkedList {
         Node temp = this.head;
         while (temp != null){
             response.append(temp.data);
+            if(temp.next != null)
+            {
+                response.append(" ==> ");
+            }
+            
             temp = temp.next;
         }
         response.append("]");
         return  response.toString();
     }
-    public void insert(int data){
-
+    public void insertHead(int data){
+    Node newNode = new Node(data, null, this.head);
+    this.head = newNode;
+    size++;
     }
 }
